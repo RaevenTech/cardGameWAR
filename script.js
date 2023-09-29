@@ -15,7 +15,7 @@ const getNewDeck = () => {
     console.log(deckId)
   })
 } 
-getNewDeck()      // call fucntion to get a new deck when page loads
+getNewDeck()      // call function to get a new deck when page loads
 newDeckBtn.addEventListener("click", getNewDeck)
 
 const drawNewCards = () => {
@@ -27,11 +27,11 @@ const drawNewCards = () => {
       <div id="cards-container" class="cards-container">
         <h3 class="comp-score score">Computer: 0</h3> 
         <div class="top-card" id="top-card">
-          <img src="${data.cards[1].image}" class="card" alt="Top playin card"/>
+          <img src="${data.cards[1].image}" class="card-img" alt="Top playin card"/>
         </div>
         <h3 class="cards-remaining">Remaining cards: 0</h3>
         <div class="bottom-card" id="bottom-card">
-           <img src="${data.cards[0].image}" class="card" alt="Bottom playin card"/>
+           <img src="${data.cards[0].image}" class="card-img" alt="Bottom playin card"/>
         </div>
         <h3 class="player-score score">Player: 0</h3> 
       </div>

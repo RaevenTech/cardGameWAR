@@ -7,6 +7,7 @@ body {
   object-fit: contain;
   height: 100%;
   color: red;
+  background-color: black;
 }
 
 .bg-img {
@@ -17,6 +18,7 @@ body {
   position: relative;
   display: block;
   object-fit: cover;
+  opacity: 70%;
 }
 
 .main-container {
@@ -44,7 +46,7 @@ body {
 }
 
 .btn:hover {
-  box-shadow: 1px 2px 5pc red;
+  box-shadow: 1px 2px 15px red;
 }
 
 .new-deck-btn {
@@ -52,7 +54,12 @@ body {
 }
 
 .game-title {
+  color: black;
+  font-size: 4rem;
+  font-family: 'Geostar Fill', cursive;
   margin: 0em;
+  align-self: center;
+  text-shadow: 0px 0px 3px red, 0px 0px 8px goldenrod;
 }
 
 .cards-container {
@@ -68,7 +75,7 @@ body {
   margin-bottom: .5em;
 }
 
-.card {
+.card-img {
   height: 300px;
   width: 200px;
 }
