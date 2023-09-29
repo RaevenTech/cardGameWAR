@@ -15,6 +15,7 @@ body {
   max-height: max-content;
   position: relative;
   display: block;
+  object-fit: cover;
 }
 
 .main-container {
