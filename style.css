@@ -28,17 +28,26 @@ body {
   height: 100%;
 }
 
+.btn {
+  color: red;
+  background-color: black;
+  font-size: 1.75rem;
+  font-weight: 800;
+  height: 2.5em;
+  border: none;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  cursor: pointer;
+}
+
+.new-deck-btn {
+  margin-top: .5em;
+}
+
 .cards-container {
   max-height: 90vh;
 }
 
 .draw-new-btn {
-  height: 2.5em;
-  margin-bottom: 0px;
-  font-size: 1.75rem;
-  font-weight: 800;
-  background-color: black;
-  color: red;
-  border: none;
-  border-top: 2px solid red;
+  margin-bottom: .5em;
 }
