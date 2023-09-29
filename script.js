@@ -24,12 +24,24 @@ const drawNewCards = () => {
     .then(data => {
         console.log(data.cards[0].image)
       return document.getElementById("cards-container").innerHTML = `
-      <div class="top-card" id="top-card">
+      <div id="cards-container" class="cards-container">
+        <h3 class="comp-score score">Computer: 0</h3> 
+        <div class="top-card" id="top-card">
           <img src="${data.cards[1].image}" class="card" alt="Top playin card"/>
+        </div>
+        <h3 class="cards-remaining">Remaining cards: 0</h3>
+        <div class="bottom-card" id="bottom-card">
+           <img src="${data.cards[0].image}" class="card" alt="Bottom playin card"/>
+        </div>
+        <h3 class="player-score score">Player: 0</h3> 
       </div>
-      <div class="bottom-card" id="bottom-card">
-          <img src="${data.cards[0].image}" class="card" alt="Bottom playin card"/>
-      </div>`
+      `
     })
-}
-drawNewBtn.addEventListener("click", drawNewCards)
+  }
+  drawNewBtn.addEventListener("click", drawNewCards)
+      // <div class="top-card" id="top-card">
+      //     <img src="${data.cards[1].image}" class="card" alt="Top playin card"/>
+      // </div>
+      // <div class="bottom-card" id="bottom-card">
+      //     <img src="${data.cards[0].image}" class="card" alt="Bottom playin card"/>
+      // </div>

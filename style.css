@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   object-fit: contain;
   height: 100%;
+  color: red;
 }
 
 .bg-img {
@@ -39,16 +40,67 @@ body {
   border-top: 2px solid red;
   border-bottom: 2px solid red;
   cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  box-shadow: 1px 2px 5pc red;
 }
 
 .new-deck-btn {
   margin-top: .5em;
 }
 
+.game-title {
+  margin: 0em;
+}
+
 .cards-container {
   max-height: 90vh;
 }
 
+.comp-score {
+  text-align: end;
+  padding-right: 3em;
+}
+
 .draw-new-btn {
   margin-bottom: .5em;
+}
+
+.card {
+  height: 300px;
+  width: 200px;
+}
+
+.score {
+  margin: 0em;
+  text-shadow: 5px 5px 8px black;
+  color: goldenrod;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.top-card,
+.bottom-card {
+  border: 2px solid red;
+  height: 300px;
+  width: 200px;
+  border-radius: 5%;
+  box-shadow: 4px 4px 7px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-remaining {
+  border-color: red;
+  margin: .25em auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.489);
+  color: black;
+  background-color: red;
+}
+
+.player-score {
+  padding-left: 3em;
 }
