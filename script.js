@@ -39,9 +39,3 @@ const drawNewCards = () => {
     })
   }
   drawNewBtn.addEventListener("click", drawNewCards)
-      // <div class="top-card" id="top-card">
-      //     <img src="${data.cards[1].image}" class="card" alt="Top playin card"/>
-      // </div>
-      // <div class="bottom-card" id="bottom-card">
-      //     <img src="${data.cards[0].image}" class="card" alt="Bottom playin card"/>
-      // </div>
