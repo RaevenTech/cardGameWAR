@@ -31,7 +31,7 @@ const drawNewCards = () => {
         </div>
         <h3 class="cards-remaining">Remaining cards: 0</h3>
         <div class="bottom-card" id="bottom-card">
-           <img src="${data.cards[0].image}" class="card-img" alt="Bottom playin card"/>
+          <img src="${data.cards[0].image}" class="card-img" alt="Bottom playin card"/>
         </div>
         <h3 class="player-score score">Player: 0</h3> 
       </div>
