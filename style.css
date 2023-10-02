@@ -112,3 +112,7 @@ body {
 .player-score {
   padding-left: 3em;
 }
+
+button:disabled {
+  cursor: not-allowed;
+}
