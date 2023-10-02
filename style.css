@@ -3,12 +3,12 @@ body {
   margin: 0em;
   user-select: none;
   padding: 0em 0em;
-  /* background-image: url("/assets/casino.jpeg"); */
+  background-color: black;
+  background-color: rgba(61, 6, 6, 0.998);
   background-repeat: no-repeat;
   object-fit: contain;
   height: 100%;
   color: red;
-  background-color: black;
 }
 
 .bg-img {
