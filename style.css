@@ -3,6 +3,7 @@ body {
   margin: 0em;
   user-select: none;
   padding: 0em 0em;
+  /* background-image: url("/assets/casino.jpeg"); */
   background-repeat: no-repeat;
   object-fit: contain;
   height: 100%;
