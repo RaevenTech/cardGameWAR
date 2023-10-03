@@ -16,14 +16,12 @@ let computerScore = 0
 let playerScore = 0
 let deckId = ""
 
-const getNewDeck = () => {
-  fetch(baseUrl + "new/shuffle/", {method:"GET"})
-  .then(resp => resp.json())
-  .then(jsonData => {
+const getNewDeck = async() => {
+  const resp = await fetch(baseUrl + "new/shuffle/", {method:"GET"})
+  const jsonData = await resp.json()
     cardsRemainingEl.innerText = `Remaining cards:${jsonData.remaining}`
     deckId = jsonData.deck_id
     console.log(deckId)
-  })
 } 
 //getNewDeck()      // call function to get a new deck when page loads
 newDeckBtn.addEventListener("click", getNewDeck)
@@ -55,8 +53,8 @@ const drawNewCards = () => {
               gameTitleEl.innerText =  "You win the WAR!"
               drawNewBtn.disabled = true
             }
-            else{
-              gameTitleEl.innerText =  "It's a Draw"
+            else if(computerScore === playerScore && data.remaining === 0) {
+              gameTitleEl.innerText =  " It's a DRAW!"
               drawNewBtn.disabled = true
             }
     })
