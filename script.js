@@ -6,6 +6,7 @@ const cardsContainerEl = document.getElementById("cards-container")
 const cardsRemainingEl = document.getElementById("cards-remaining")
 const computerScoreEl = document.getElementById("comp-score")
 const playerScoreEl = document.getElementById("player-score")
+const gameTitleEl = document.getElementById("game-title")
 //console.log(computerScoreEl)
 
 const baseUrl = "https://apis.scrimba.com/deckofcards/api/deck/"
@@ -44,9 +45,18 @@ const drawNewCards = () => {
       <h3 class="player-score score" id="player-score">Player: ${playerScore}</h3>`
 
       const winnerText = getWinningCard(data.cards[0], data.cards[1])
-            document.getElementById("game-title").innerText =  winnerText
+            gameTitleEl.innerText =  winnerText
       
-            if(data.remaining === 0){
+            if(computerScore > playerScore && data.remaining === 0){
+              gameTitleEl.innerText =  "You lose, GAMEOVER!"
+              drawNewBtn.disabled = true
+            }
+            else if(computerScore < playerScore && data.remaining === 0){
+              gameTitleEl.innerText =  "You win the WAR!"
+              drawNewBtn.disabled = true
+            }
+            else{
+              gameTitleEl.innerText =  "It's a Draw"
               drawNewBtn.disabled = true
             }
     })
@@ -71,5 +81,6 @@ const drawNewCards = () => {
       return "Continue Battle!"
     }
   }
+
 
 
