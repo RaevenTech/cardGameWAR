@@ -6,7 +6,7 @@ const cardsContainerEl = document.getElementById("cards-container")
 const cardsRemainingEl = document.getElementById("cards-remaining")
 const computerScoreEl = document.getElementById("comp-score")
 const playerScoreEl = document.getElementById("player-score")
-console.log(computerScoreEl)
+//console.log(computerScoreEl)
 
 const baseUrl = "https://apis.scrimba.com/deckofcards/api/deck/"
 
@@ -33,7 +33,7 @@ const drawNewCards = () => {
     .then(data => { 
   
       cardsContainerEl.innerHTML = `
-      
+      <h3 class="comp-score score" id="comp-score">Player: ${computerScore}</h3>
       <div class="top-card" id="top-card">
         <img src="${data.cards[0].image}" class="card-img" alt="Top playin card"/>
       </div>
@@ -41,7 +41,7 @@ const drawNewCards = () => {
       <div class="bottom-card" id="bottom-card">
         <img src="${data.cards[1].image}" class="card-img" alt="Bottom playin card"/>
       </div>
-      <h3 class="player-score score">Player: ${playerScore}</h3>`
+      <h3 class="player-score score" id="player-score">Player: ${playerScore}</h3>`
 
       const winnerText = getWinningCard(data.cards[0], data.cards[1])
             document.getElementById("game-title").innerText =  winnerText
@@ -61,16 +61,15 @@ const drawNewCards = () => {
 
     if(card1IndexValue > card2IndexValue){
       computerScore++
-      computerScoreEl.innerText = `Computer: ${computerScore}`
       return "Card 1 Wins!"
     }
     else if(card1IndexValue < card2IndexValue){
       playerScore++
-      playerScoreEl.innerText = `Player: ${playerScore}`
       return "Card 2 Wins!"
     }
     else{
       return "Continue Battle!"
     }
   }
+
 
